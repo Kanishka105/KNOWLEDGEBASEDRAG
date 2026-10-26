@@ -1,0 +1,474 @@
+{
+  "project": "SciFact Advanced Retrieval Experiments",
+  "dataset": "SciFact",
+  "experiments": [
+    {
+      "name": "Phase 5 baseline — BM25",
+      "method": "bm25",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 30
+      },
+      "metrics": {
+        "precision@5": 0.16666666666666669,
+        "recall@5": 0.7733333333333333,
+        "mrr@5": 0.6955555555555555,
+        "ndcg@5": 0.7131021528218419
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T04:50:14.890910+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — DENSE",
+      "method": "dense",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 30
+      },
+      "metrics": {
+        "precision@5": 0.18000000000000002,
+        "recall@5": 0.8033333333333333,
+        "mrr@5": 0.6344444444444444,
+        "ndcg@5": 0.6662673518965776
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T04:50:14.892992+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — HYBRID",
+      "method": "hybrid",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 30
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.7200000000000001,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008865
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T04:50:14.922421+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k20_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 20,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:38:23.887907+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k40_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 40,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:40:39.501058+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k60_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 60,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:42:25.354395+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k100_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 100,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:43:57.319545+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k20_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 20,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:52:29.196405+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k40_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 40,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:54:29.443792+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k60_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 60,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:55:58.698953+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k100_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 100,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 30,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16,
+        "recall@5": 0.72,
+        "mrr@5": 0.6611111111111111,
+        "ndcg@5": 0.6758876984008864
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T05:57:22.219354+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k20_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 20,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 300,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16533333333333333,
+        "recall@5": 0.7482222222222222,
+        "mrr@5": 0.6513888888888889,
+        "ndcg@5": 0.6672553115540881
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T06:41:20.971844+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k40_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 40,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 300,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16533333333333333,
+        "recall@5": 0.7482222222222222,
+        "mrr@5": 0.6527777777777778,
+        "ndcg@5": 0.6677785480327691
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T06:58:31.149212+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k60_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 60,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 300,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16533333333333333,
+        "recall@5": 0.7482222222222222,
+        "mrr@5": 0.6527777777777778,
+        "ndcg@5": 0.6677785480327691
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T07:14:02.740971+00:00"
+    },
+    {
+      "name": "hybrid_rrf_k100_test",
+      "method": "BM25 + FAISS + RRF + CrossEncoder",
+      "parameters": {
+        "rrf_k": 100,
+        "top_k": 5,
+        "candidate_k": 100,
+        "rerank_k": 50,
+        "evaluated_queries": 300,
+        "split": "test"
+      },
+      "metrics": {
+        "precision@5": 0.16466666666666668,
+        "recall@5": 0.7473888888888889,
+        "mrr@5": 0.6527777777777778,
+        "ndcg@5": 0.6670145664637778
+      },
+      "notes": "Hybrid retrieval evaluated on the same SciFact test queries with binary relevance and fixed retrieval settings.",
+      "created_at": "2026-10-22T07:31:17.781143+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — BM25",
+      "method": "bm25",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.15799999999999997,
+        "recall@5": 0.7284444444444444,
+        "mrr@5": 0.6132222222222222,
+        "ndcg@5": 0.6360323817543188
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:07:53.571020+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — DENSE",
+      "method": "dense",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.16399999999999998,
+        "recall@5": 0.7379444444444444,
+        "mrr@5": 0.5996666666666666,
+        "ndcg@5": 0.6292831434933516
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:07:53.597185+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — HYBRID",
+      "method": "hybrid",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.1653333333333333,
+        "recall@5": 0.7482222222222222,
+        "mrr@5": 0.6527777777777778,
+        "ndcg@5": 0.6677785480327691
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:07:53.620848+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — BM25",
+      "method": "bm25",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.15799999999999997,
+        "recall@5": 0.7284444444444444,
+        "mrr@5": 0.6132222222222222,
+        "ndcg@5": 0.6360323817543188
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:09:00.319294+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — DENSE",
+      "method": "dense",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.16399999999999998,
+        "recall@5": 0.7379444444444444,
+        "mrr@5": 0.5996666666666666,
+        "ndcg@5": 0.6292831434933516
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:09:00.322519+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — HYBRID",
+      "method": "hybrid",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.1653333333333333,
+        "recall@5": 0.7482222222222222,
+        "mrr@5": 0.6527777777777778,
+        "ndcg@5": 0.6677785480327691
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:09:00.352745+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — BM25",
+      "method": "bm25",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.15799999999999997,
+        "recall@5": 0.7284444444444444,
+        "mrr@5": 0.6132222222222222,
+        "ndcg@5": 0.6360323817543188
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:23:45.736587+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — DENSE",
+      "method": "dense",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.16399999999999998,
+        "recall@5": 0.7379444444444444,
+        "mrr@5": 0.5996666666666666,
+        "ndcg@5": 0.6292831434933516
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:23:45.773795+00:00"
+    },
+    {
+      "name": "Phase 5 baseline — HYBRID",
+      "method": "hybrid",
+      "parameters": {
+        "source": "phase5_evaluation",
+        "dataset": "SciFact",
+        "split": "test",
+        "k": 5,
+        "evaluated_query_count": 300
+      },
+      "metrics": {
+        "precision@5": 0.1653333333333333,
+        "recall@5": 0.7482222222222222,
+        "mrr@5": 0.6527777777777778,
+        "ndcg@5": 0.6677785480327691
+      },
+      "notes": "Imported measured results; no retrieval was rerun.",
+      "created_at": "2026-10-22T09:23:45.798111+00:00"
+    }
+  ]
+}
